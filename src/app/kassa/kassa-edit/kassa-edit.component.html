@@ -1,0 +1,12 @@
+<div class="mb-3">
+  <form [formGroup]="kassaForm" (ngSubmit)="onSubmit()">
+    <label class="form-label">Kassa Name</label>
+    <input
+      formControlName="info"
+      class="form-control"
+      placeholder="add new kassa"
+    />
+    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="submit" routerLink="" class="btn btn-danger">Cancel</button>
+  </form>
+</div>

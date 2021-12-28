@@ -1,0 +1,24 @@
+<button class="btn btn-success" routerLink="create">Create new kassa</button>
+<table class="table striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <td>{{ item.id }}</td>
+      <td>{{ item.info }}</td>
+
+      <td>
+        <button routerLink="kassa/edit/{{ item.id }}" class="btn btn-info">
+          Update
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
